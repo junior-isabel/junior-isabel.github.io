@@ -3,8 +3,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junior Isabel - Portofólio</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
 </head>
 <body>
-    
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="#" data-link="/" class="active">início</a>
+            </li>
+            <li>
+                <a href="#" data-link="profile">perfil</a>
+            </li>
+            <li>
+                <a href="#" data-link="contacts">contactos</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="containers">
+        <div class="page active-page" data-page="/">
+            <div class="body delay-page">
+                <header>
+                    <ul class="blocks animation letter">
+                    </ul>
+                </header>
+            </div>
+        </div>
+        <div class="page" data-page="profile">Perfil</div>
+        <div class="page" data-page="contacts">Contactos</div>
+    </div>
+    <script src="assets/js/a.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="assets/js//animationLetter.js"></script>
+    <script src="assets/js/letter.js"></script>
+    <script src="assets/js/boostsrap.js"></script>
 </body>
 </html>

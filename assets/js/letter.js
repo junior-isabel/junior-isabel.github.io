@@ -1,5 +1,7 @@
-function getLetter (letter) {
-  function draw(row, col, blocks) {
+function getLetter (row, col, blocks) {
+  let x = 10
+  let y = 1
+  function draw() {
     for (let i = 0; i < this.points.length; i++) {
       let point = this.points[i]
       for (let j = 0; j < point.length; j++) {
@@ -31,7 +33,7 @@ function getLetter (letter) {
     y: 0,
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: true, type: 1 },
+      { r: y, c: x, length: 5, isLeft: true, type: 1 },
       { r: 1, c: 10, length: 5, isLeft: false, type: 1 },
       { r: 4, c: 8, length: 5, isLeft: false, type: 0}
     ],
@@ -291,6 +293,11 @@ function getLetter (letter) {
     ],
     draw: draw
   }
+  function clear () {
+    for(let i = 0; i < blocks.length; i++) {
+      blocks[i].style.background = "#000"
+    }
+  }
   return {
     A,
     B,
@@ -307,10 +314,48 @@ function getLetter (letter) {
     M,
     N,
     O,
-
-  }
+    clear,
+    '0': A,
+    '1': B,
+    '2': C,
+    '3': D,
+    '4': E,
+    '5': F,
+    '6': G,
+    '7': H,
+    '8': I,
+    '9': J,
+    '10': K,
+    '11': L,
+    '12': M,
+    '13': N,
+    '14': O,
+    '15': P,
+    '16': Q,
+    '17': R,
+    '18': S,
+    '19': T,
+    '20': U,
+    '21': V,
+    '22': W,
+    '23': X,
+    '24': Y,
+    '25': Z,
+    length: 25
+    }
 }
 //A.draw(ROWS, COLS, BLOCKS.children)
 
 
-getLetter().J.draw(ROWS, COLS, BLOCKS.children)
+const letters = getLetter(ROWS, COLS, BLOCKS.children)
+
+
+let count = 0
+setInterval( () => {
+  letters.clear()
+  letters[count].draw()
+  count++
+
+  if(count > letters.length) count = 0
+
+}, 500)

@@ -1,6 +1,6 @@
 function getLetter (row, col, blocks) {
-  let x = 10
-  let y = 1
+  let x = 4
+  let y = 0
   function draw() {
     for (let i = 0; i < this.points.length; i++) {
       let point = this.points[i]
@@ -29,164 +29,156 @@ function getLetter (row, col, blocks) {
     }
   }
   const A = {
-    x: 0,
-    y: 0,
     color: 'red',
     points: [
       { r: y, c: x, length: 5, isLeft: true, type: 1 },
-      { r: 1, c: 10, length: 5, isLeft: false, type: 1 },
-      { r: 4, c: 8, length: 5, isLeft: false, type: 0}
+      { r: y, c: x, length: 5, isLeft: false, type: 1 },
+      { r: y + 3, c: x - 2, length: 5, isLeft: false, type: 0}
     ],
     draw: draw
-  }
-  
+  }  
   const B = {
-    x: 0,
-    y: 0,
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2 },
-      { r: 1, c: 10, length: 2, isLeft: false, type: 0 },
-      { r: 2, c: 12, length: 1, isLeft: false, type: 2},
-      { r: 3, c: 11, length: 1, isLeft: false, type: 2},
-      { r: 4, c: 12, length: 1, isLeft: false, type: 2},
-      { r: 5, c: 10, length: 2, isLeft: false, type: 0}
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2 },
+      { r: y, c: x - 4, length: 2, isLeft: false, type: 0 },
+      { r: y +1, c: x - 4 + 2, length: 1, isLeft: false, type: 2},
+      { r: y + 2, c: x - 4 + 1, length: 1, isLeft: false, type: 2},
+      { r: y + 3, c: x - 4 + 2, length: 1, isLeft: false, type: 2},
+      { r: y + 4, c: x - 4, length: 2, isLeft: false, type: 0}
     ],
    draw : draw
   }
-  
   const C = {
     color: 'red',
     points: [
-      { r: 1, c: 11, length: 2, isLeft: false, type: 0 },
-      { r: 2, c: 10, length: 3, isLeft: false, type: 2},
-      { r: 5, c: 11, length: 2, isLeft: false, type: 0}
+      { r: y, c: x - 3, length: 2, isLeft: false, type: 0 },
+      { r: y + 1, c: x - 4, length: 3, isLeft: false, type: 2},
+      { r: y + 4, c: x - 3, length: 2, isLeft: false, type: 0}
     ],
     draw: draw
   }
-  
   const D = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 5, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 2, c: 13, length: 3, isLeft: false, type: 2}
+      { r: y, c: x - 4, length: 3, isLeft: false, type: 0},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y + 4, c: x - 4, length: 3, isLeft: false, type: 0},
+      { r: y + 1, c: x  - 1, length: 3, isLeft: false, type: 2}
     ],
     draw: draw
   }
-  
   const E = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 1, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 3, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 5, c: 10, length: 3, isLeft: false, type: 0}
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y, c: x - 4, length: 3, isLeft: false, type: 0},
+      { r: y + 2, c: x - 4, length: 3, isLeft: false, type: 0},
+      { r: y + 4, c: x - 4, length: 3, isLeft: false, type: 0}
     ],
     draw: draw
   }
   const F = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 1, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 3, c: 10, length: 3, isLeft: false, type: 0}
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y, c: x - 4, length: 3, isLeft: false, type: 0},
+      { r: y + 2, c: x - 4, length: 3, isLeft: false, type: 0}
     ],
     draw: draw
   }
   const G = {
     color: 'red',
     points: [
-      { r: 1, c: 11, length: 2, isLeft: false, type: 0},
-      { r: 2, c: 10, length: 3, isLeft: false, type: 2},
-      { r: 5, c: 11, length: 2, isLeft: false, type: 0},
-      { r: 3, c: 13, length: 2, isLeft: false, type: 2},
-      { r: 3, c: 12, length: 1, isLeft: false, type: 0}
+      { r: y, c: x - 3, length: 2, isLeft: false, type: 0},
+      { r: y + 1, c: x - 4, length: 3, isLeft: false, type: 2},
+      { r: y + 4, c: x  - 3, length: 2, isLeft: false, type: 0},
+      { r: y + 2, c: x - 1, length: 2, isLeft: false, type: 2},
+      { r: y + 2, c: x - 2, length: 1, isLeft: false, type: 0}
     ],
     draw: draw
   }
   const H = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 3, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 1, c: 13, length: 5, isLeft: false, type: 2}
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y + 2, c: x - 4, length: 3, isLeft: false, type: 0},
+      { r: y, c: x - 1, length: 5, isLeft: false, type: 2}
     ],
     draw: draw
   }
   const I = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 1, c: 11, length: 5, isLeft: false, type: 2},
-      { r: 5, c: 10, length: 3, isLeft: false, type: 0}
+      { r: y, c: x - 4, length: 3, isLeft: false, type: 0},
+      { r: y, c: x - 3, length: 5, isLeft: false, type: 2},
+      { r: y + 4, c: x - 4, length: 3, isLeft: false, type: 0}
     ],
     draw: draw
   }
   const J = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 2, c: 12, length: 3, isLeft: false, type: 2},
-      { r: 5, c: 11, length: 1, isLeft: true, type: 0},
-      { r: 4, c: 10, length: 1, isLeft: true, type: 0}
+      { r: y, c: x - 4, length: 3, isLeft: false, type: 0},
+      { r: y + 1, c: x - 2, length: 3, isLeft: false, type: 2},
+      { r: y + 4, c: x - 3, length: 1, isLeft: true, type: 0},
+      { r: y + 3, c: x - 4, length: 1, isLeft: true, type: 0}
     ],
     draw: draw
   }
   const K = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 1, c: 13, length: 3, isLeft: true, type: 1},
-      { r: 3, c: 11, length: 3, isLeft: false, type: 1},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y, c: x - 1, length: 3, isLeft: true, type: 1},
+      { r: y + 2, c: x - 3, length: 3, isLeft: false, type: 1},
     ],
     draw: draw
   }
   const L = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 5, c: 11, length: 2, isLeft: false, type: 0},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y + 4, c: x - 3, length: 2, isLeft: false, type: 0},
     ],
     draw: draw
   }
   const M = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 1, c: 14, length: 5, isLeft: false, type: 2},
-      { r: 1, c: 10, length: 3, isLeft: false, type: 1},
-      { r: 1, c: 14, length: 3, isLeft: true, type: 1},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y, c: x, length: 5, isLeft: false, type: 2},
+      { r: y, c: x - 4, length: 3, isLeft: false, type: 1},
+      { r: y, c: x, length: 3, isLeft: true, type: 1},
     ],
     draw: draw
   }
   const N = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 2, c: 11, length: 3, isLeft: false, type: 1},
-      { r: 1, c: 13, length: 5, isLeft: false, type: 2},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y + 1, c: x - 3, length: 3, isLeft: false, type: 1},
+      { r: y, c: x - 1, length: 5, isLeft: false, type: 2},
     ],
     draw: draw
   }
   const O = {
     color: 'red',
     points: [
-      { r: 1, c: 11, length: 2, isLeft: false, type: 0},
-      { r: 2, c: 10, length: 3, isLeft: false, type: 2},
-      { r: 2, c: 13, length: 3, isLeft: false, type: 2},
-      { r: 5, c: 11, length: 2, isLeft: false, type: 0},
+      { r: y, c: x - 3, length: 2, isLeft: false, type: 0},
+      { r: y + 1, c: x - 4, length: 3, isLeft: false, type: 2},
+      { r: y + 1, c: x - 1, length: 3, isLeft: false, type: 2},
+      { r: y + 4, c: x - 3, length: 2, isLeft: false, type: 0},
     ],
     draw: draw
   }
   const P = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 1, c: 11, length: 1, isLeft: false, type: 0},
-      { r: 2, c: 12, length: 1, isLeft: false, type: 0},
-      { r: 3, c: 11, length: 1, isLeft: true, type: 0},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 2},
+      { r: y, c: x - 3, length: 1, isLeft: false, type: 0},
+      { r: y + 1 , c: x - 2, length: 1, isLeft: false, type: 0},
+      { r: y + 2, c: x - 3, length: 1, isLeft: true, type: 0},
     ],
     draw: draw
   }
@@ -194,11 +186,11 @@ function getLetter (row, col, blocks) {
   const Q = {
     color: 'red',
     points: [
-      { r: 1, c: 11, length: 2, isLeft: false, type: 0},
-      { r: 2, c: 10, length: 2, isLeft: false, type: 2},
-      { r: 2, c: 13, length: 2, isLeft: false, type: 2},
-      { r: 4, c: 11, length: 2, isLeft: false, type: 0},
-      { r: 3, c: 12, length: 3, isLeft: false, type: 1},
+      { r: y, c: x - 3, length: 2, isLeft: false, type: 0},
+      { r: y + 1, c: x - 4, length: 2, isLeft: false, type: 2},
+      { r: y + 1, c: x - 1, length: 2, isLeft: false, type: 2},
+      { r: y + 3, c: x - 3, length: 2, isLeft: false, type: 0},
+      { r: y + 2, c: x - 2, length: 3, isLeft: false, type: 1},
     ],
     draw: draw
   }
@@ -206,23 +198,23 @@ function getLetter (row, col, blocks) {
   const R = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 2},
-      { r: 1, c: 11, length: 1, isLeft: false, type: 0},
-      { r: 2, c: 12, length: 1, isLeft: false, type: 0},
-      { r: 3, c: 11, length: 1, isLeft: false, type: 0},
-      { r: 4, c: 12, length: 2, isLeft: false, type: 2},
+      { r: y, c: x- 4, length: 5, isLeft: false, type: 2},
+      { r: y, c: x - 3, length: 1, isLeft: false, type: 0},
+      { r: y + 1, c: x - 2, length: 1, isLeft: false, type: 0},
+      { r: y + 2, c: x - 3, length: 1, isLeft: false, type: 0},
+      { r: y + 3, c: x - 2, length: 2, isLeft: false, type: 2},
     ],
     draw: draw
   }
   const S = {
     color: 'red',
     points: [
-      { r: 2, c: 13, length: 1, isLeft: false, type: 0},
-      { r: 1, c: 12, length: 2, isLeft: true, type: 0},
-      { r: 2, c: 10, length: 1, isLeft: false, type: 2},
-      { r: 3, c: 11, length: 3, isLeft: false, type: 1},
-      { r: 6, c: 12, length: 2, isLeft: true, type: 0},
-      { r: 5, c: 10, length: 1, isLeft: false, type: 0},
+      { r: y + 1, c: x - 1, length: 1, isLeft: false, type: 0},
+      { r: y, c: x - 2, length: 2, isLeft: true, type: 0},
+      { r: y + 1, c: x - 4, length: 1, isLeft: false, type: 2},
+      { r: y + 2, c: x - 3, length: 3, isLeft: false, type: 1},
+      { r: y + 5, c: x - 2, length: 2, isLeft: true, type: 0},
+      { r: y + 4, c: x - 4, length: 1, isLeft: false, type: 0},
     ],
     draw: draw
   }
@@ -230,8 +222,8 @@ function getLetter (row, col, blocks) {
   const T = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 3, isLeft: false, type: 0},
-      { r: 1, c: 11, length: 4, isLeft: false, type: 2},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 0},
+      { r: y, c: x - 2, length: 5, isLeft: false, type: 2},
     ],
     draw: draw
   }
@@ -239,9 +231,9 @@ function getLetter (row, col, blocks) {
   const U = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 4, isLeft: false, type: 2},
-      { r: 1, c: 13, length: 4, isLeft: false, type: 2},
-      { r: 5, c: 11, length: 2, isLeft: false, type: 0},
+      { r: y, c: x - 4, length: 4, isLeft: false, type: 2},
+      { r: y, c: x - 1, length: 4, isLeft: false, type: 2},
+      { r: y + 4, c: x - 3, length: 2, isLeft: false, type: 0},
     ],
     draw: draw
   }
@@ -249,8 +241,8 @@ function getLetter (row, col, blocks) {
   const V = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 4, isLeft: false, type: 1},
-      { r: 1, c: 16, length: 4, isLeft: true, type: 1},
+      { r: y, c: x - 4, length: 4, isLeft: false, type: 1},
+      { r: y, c: x + 2, length: 4, isLeft: true, type: 1},
     ],
     draw: draw
   }
@@ -258,18 +250,18 @@ function getLetter (row, col, blocks) {
   const W = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 4, isLeft: false, type: 2},
-      { r: 1, c: 14, length: 4, isLeft: false, type: 2},
-      { r: 2, c: 12, length: 2, isLeft: true, type: 1},
-      { r: 2, c: 12, length: 2, isLeft: false, type: 1},
+      { r: y, c: x - 4, length: 4, isLeft: false, type: 2},
+      { r: y, c: x, length: 4, isLeft: false, type: 2},
+      { r: y + 1, c: x - 2, length: 2, isLeft: true, type: 1},
+      { r: y + 1, c: x - 2, length: 2, isLeft: false, type: 1},
     ],
     draw: draw
   }
   const X = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 1},
-      { r: 1, c: 14, length: 5, isLeft: true, type: 1},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 1},
+      { r: y, c: x, length: 5, isLeft: true, type: 1},
     ],
     draw: draw
   }
@@ -277,9 +269,9 @@ function getLetter (row, col, blocks) {
   const Y = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 3, isLeft: false, type: 1},
-      { r: 1, c: 14, length: 3, isLeft: true, type: 1},
-      { r: 4, c: 12, length: 2, isLeft: false, type: 2},
+      { r: y, c: x - 4, length: 3, isLeft: false, type: 1},
+      { r: y, c: x, length: 3, isLeft: true, type: 1},
+      { r: y + 3, c: x - 2, length: 2, isLeft: false, type: 2},
     ],
     draw: draw
   }
@@ -287,9 +279,9 @@ function getLetter (row, col, blocks) {
   const Z = {
     color: 'red',
     points: [
-      { r: 1, c: 10, length: 5, isLeft: false, type: 0},
-      { r: 1, c: 14, length: 5, isLeft: true, type: 1},
-      { r: 5, c: 10, length: 5, isLeft: false, type: 0},
+      { r: y, c: x - 4, length: 5, isLeft: false, type: 0},
+      { r: y, c: x, length: 5, isLeft: true, type: 1},
+      { r: y + 4, c: x - 4, length: 5, isLeft: false, type: 0},
     ],
     draw: draw
   }
@@ -358,4 +350,4 @@ setInterval( () => {
 
   if(count > letters.length) count = 0
 
-}, 500)
+}, 1500)
